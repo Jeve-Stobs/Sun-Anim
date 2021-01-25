@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center; 
+  background:black;
+  animation:bgChange 20s infinite;
+  animation-direction: alternate;
+  /* Chrome, Safari, Opera */
+  -webkit-animation:bgChange 20s infinite; ​
+  -webkit-animation-delay: 0s;
+  overflow-y: hidden;
+  overflow-x: hidden; 
+}
+}
+
+/* Standard syntax */
+@keyframes bgChange{
+  0% {background:black;}
+  50% {background:skyblue;}
+  100% {background:black;}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes bgChange{
+  0% {background:black;}
+  25% {background:skyblue;}
+  50% {background:deepskyblue;}
+  75% {background:skyblue;}
+  100% {background:black;}
+}
+​
+#container{
+ position:relative;
+}
+
+.theSun {
+  width:100px;
+  height:100px;
+  position:absolute;
+  animation:sunRising 20s infinite;
+  border-radius:50%;
+  -moz-border-radius:50%;
+  /* Safari and Chrome */
+  -webkit-animation:sunRising 20s infinite;
+  background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow, orange);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+}
+
+@keyframes sunRising
+{
+  0%   {top:70%;left:-10%;}
+  25%  {top:30%;left:25%;}
+  50%  {top:5%;left:50%;}
+  75%  {top:30%;left:75%;}
+  100% {top:70%;left:110%;}
+}
+
+@-webkit-keyframes sunRising /* Safari and Chrome */{
+  0%   {top:70%;left:-10%;}
+  25%  {top:30%;left:25%;}
+  50%  {top:5%;left:50%;}
+  75%  {top:30%;left:75%;}
+  100% {top:70%;left:110%;}
+}
+
+.cloud{
+  width:200px;
+  height:60px;
+  background:white;
+  position:relative;
+  border-radius:200px;
+  -webkit-border-radius:200px;
+  -moz-border-radius:200px;
+}
+
+.cloud:before, .cloud:after{
+  content:'';
+  background:white;
+  position:absolute;
+  width:100px;
+  height:80px;
+  top:-15px;
+  left:10px;
+  border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+  -webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+	width: 120px; height: 120px;
+	top: -55px; left: auto; right: 15px;
+}
+
+.c1 {
+  margin-top:100px;
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+.c2 {
+  margin-top:30px;
+	-webkit-animation: moveclouds 22s linear infinite;
+	-moz-animation: moveclouds 22s linear infinite;
+	-o-animation: moveclouds 22s linear infinite;
+  animation-delay:-2s;
+  -webkit-animation-delay:-2s; /* Safari and Chrome */ 
+  -moz-animation-delay: -2s /* Firefox */
+}
+@-webkit-keyframes moveclouds {
+	0% {left: 110%;opacity:0.8}
+  50% {opacity:0.7;}
+  75% {opacity:0.6;}
+  85% {opacity:0;}
+	100% {left: -10%;opacity:0;}
+}
+@-moz-keyframes moveclouds {
+	0% {left: 110%;opacity:0.8}
+  50% {opacity:0.7;}
+  75% {opacity:0.6;}
+  85% {opacity:0;}
+	100% {left: -10%;opacity:0;}
+}
+@-o-keyframes moveclouds {
+	0% {left: 110%;opacity:0.8}
+  50% {opacity:0.7;}
+  75% {opacity:0.6;}
+  85% {opacity:0;}
+	100% {left: -10%;opacity:0;}
+}
