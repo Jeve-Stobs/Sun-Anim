@@ -1,0 +1,94 @@
+
+  
+  /* background CSS */
+  .bg {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .day {
+    background: radial-gradient(250px 250px at 50vw 50vh, #fff 30%, #eef 50%, #ddf 60%, #ccf, #bbf, #aaf, #99f);
+    background-size: 600% 600%;
+    animation: 8s linear day infinite, 4s linear sky-roll infinite;
+  }
+  
+  .rise-set {
+  /*   background: radial-gradient(250px 250px at 50vw 50vh, #ffc 30%, #ff9 50%, #fd9, #fda, #fd9, #fc9);
+    background-size: 600% 600%; */
+    animation: 8s linear sunrise-sunset infinite, 4s linear sky-roll infinite;
+  }
+  
+  .night {
+    background: radial-gradient(100px 100px at 50vw 50vh, #ccf 20%, #004 25%, #003 50%, #000029, #000020, #000015);
+    background-size: 150% 150%;
+    animation: 8s linear night infinite, 4s linear sky-roll infinite;
+  }
+  
+  /* ground CSS */
+  .ground {
+    position: absolute;
+    border-radius: 50%;
+    top: 50vh;
+    animation: 8s infinite darken;
+  }
+  
+  /* animation CSS */
+  /* ground animation */
+  @keyframes darken {
+    0% {background-color: #001f00;}
+    50% {background-color: green;}
+    75% {background-color: #001f00;}
+    100% {background-color: #001f00;}
+  }
+  
+  /* sky animation */
+  @keyframes sunrise-sunset {
+    0% {opacity: .1; background-color: red; background-image: none;}
+    12.5% {opacity: .15; background-color: indigo; background-image: none;}
+    25% {opacity: 0;}
+    37.5% {opacity: 0;}
+    50% {opacity: .1; background-color: red;}
+    62.5% {opacity: .15; background-color: indigo;}
+    75% {opacity: 0;}
+    87.5% {opacity: 0;}
+    100% {opacity: .1; background-color: indigo;}
+  }
+  
+  @keyframes day {
+    0% {opacity: 0;}
+    12.5% {opacity: .5;}
+    25% {opacity: 1;}
+    37.5% {opacity: .5;}
+    50% {opacity: 0;}
+    62.5% {opacity: 0;}
+    75% {opacity: 0;}
+    87.5% {opacity: 0;}
+    100% {opacity: 0;}
+  }
+  
+  @keyframes night {
+    0% {opacity: 0;}
+    12.5% {opacity: 0;}
+    25% {opacity: 0;}
+    37.5% {opacity: 0;}
+    50% {opacity: 0;}
+    62.5% {opacity: .9;}
+    75% {opacity: 1;}
+    87.5% {opacity: 1;}
+    100% {opacity: .9;}
+  }
+  
+  @keyframes sky-roll {
+    0% {background-position: -53vw 20vh;}
+    10% {background-position: -42.25vw 1vh;}
+    20% {background-position: -31.5vw -14vh;}
+    30% {background-position: -20.5vw -28vh;}
+    40% {background-position: -9.5vw -32vh;}
+    50% {background-position: 1.5vw -34vh;}
+    60% {background-position: 12.5vw -32vh;}
+    70% {background-position: 23.5vw -28vh;}
+    80% {background-position: 34.5vw -14vh;}
+    90% {background-position: 45.5vw 2vh;}
+    100% {background-position: 56.5vw 20vh;}
+  }
