@@ -29,7 +29,7 @@
   .ground {
     position: absolute;
     border-radius: 50%;
-    top: 50vh;
+    top: 80vh;
     animation: 8s infinite darken;
   }
   
