@@ -5,7 +5,6 @@ body {
   background:black;
   animation:bgChange 20s infinite;
   animation-direction: alternate;
-  /* Chrome, Safari, Opera */
   -webkit-animation:bgChange 20s infinite; ​
   -webkit-animation-delay: 0s;
   overflow-y: hidden;
@@ -13,14 +12,12 @@ body {
 }
 }
 
-/* Standard syntax */
 @keyframes bgChange{
   0% {background:black;}
   50% {background:skyblue;}
   100% {background:black;}
 }
 
-/* Chrome, Safari, Opera */
 @-webkit-keyframes bgChange{
   0% {background:black;}
   25% {background:skyblue;}
@@ -40,7 +37,6 @@ body {
   animation:sunRising 20s infinite;
   border-radius:50%;
   -moz-border-radius:50%;
-  /* Safari and Chrome */
   -webkit-animation:sunRising 20s infinite;
   background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
 	background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow, orange);
@@ -107,8 +103,8 @@ body {
 	-moz-animation: moveclouds 22s linear infinite;
 	-o-animation: moveclouds 22s linear infinite;
   animation-delay:-2s;
-  -webkit-animation-delay:-2s; /* Safari and Chrome */ 
-  -moz-animation-delay: -2s /* Firefox */
+  -webkit-animation-delay:-2s;
+  -moz-animation-delay: -2s;
 }
 @-webkit-keyframes moveclouds {
 	0% {left: 110%;opacity:0.8}
